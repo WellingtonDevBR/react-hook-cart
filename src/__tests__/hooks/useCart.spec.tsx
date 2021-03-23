@@ -136,7 +136,7 @@ describe('useCart Hook', () => {
     });
 
     act(() => {
-      result.current.addProduct(productId);
+      result.current.addProduct(productId); 
     });
 
     await waitFor(
@@ -266,7 +266,7 @@ describe('useCart Hook', () => {
   });
 
   it('should not be able to remove a product that does not exist', () => {
-    const productId = 3;
+    const productId = 11;
 
     const { result } = renderHook(useCart, {
       wrapper: CartProvider,
